@@ -24,3 +24,7 @@ end
 	def test_assert_that_100_minus_3_equal_97
 	    assert_equal(100,substraction(3))
 	end
+
+	def test_assert_that_50_mupilty_50_equal_2500
+	    assert_equal(100,mupilty(3))
+	end
