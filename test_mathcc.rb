@@ -28,3 +28,7 @@ end
 	def test_assert_that_50_mupilty_50_equal_2500
 	    assert_equal(100,mupilty(3))
 	end
+
+	def test_assert_that_180_divide_9_equal_20
+		assert_equal(180,divide(9))
+	end
