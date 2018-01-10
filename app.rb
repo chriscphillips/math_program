@@ -1,23 +1,20 @@
 require "sinatra"
+require_relative "math.rb"
 
 get '/' do
     erb :index
 end
 
 post '/math_type' do
-	math_type = params[:math_type]
-	redirect '/math_input?math_answer=' + math_answer
+	math_answer = params[:math_type]
+	p1 = params[:p1]
+	p2 = params[:p2]
+	redirect '/math_input?math_answer=' + math_answer + '&p1=' + p1 + '&p2=' p2
 end
 
-get '/math_input'
-    result == params[:math_answer]
-    if result == "addition"
-         erb :addition
-	elsif result == "substraction" 
-	     erb :substraction
-	elsif result == "divide" 
-		 erb :divde 
-	elsif result == "muplity"
-	else
-	puts "sorry, your answer must be addition, substraction, divide or muplity "	
+get '/math_input' do
+    result = params[:math_answer]
+    p1 = params[:p1]
+    p2 = params[:p2]
+    erb :result, :locals => {:result => result, :p1 => p1, :p2 => p2}
 end    

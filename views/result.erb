@@ -1,0 +1,27 @@
+
+Welcome to Math!
+
+<% first_number = p1.to_i %>
+<% second_number = p2.to_i %>
+
+<%
+if result == "addition"
+	final_result = addition
+	(first_number, second_number)
+elsif result == "substraction"
+	final_result = substraction
+	(first_number, second_number)
+elsif result == "muplity"
+	final_result = muplity
+	(first_number, second_number)
+elsif result == "divde"
+	final_result = divde
+	(first_number, second_number)
+else
+puts "this has nothing to do with math."
+end
+%>
+
+
+Your result is 
+<%= final_result %>
